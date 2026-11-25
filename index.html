@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nazmi Karahan - Telekomünikasyon Teknikeri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#eef1f7; --surface:#e2e7f2; --ink:#1b2340; --muted:#56608a; --accent:#2f4bff; --line:#c5cde3;
+  --font:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121629;--surface:#1b2140;--ink:#e9ecf8;--muted:#9aa3c9;--accent:#8fa2ff;--line:#2d3566;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#121629;--surface:#1b2140;--ink:#e9ecf8;--muted:#9aa3c9;--accent:#8fa2ff;--line:#2d3566;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1.0625rem;line-height:1.6}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+header.top nav{display:flex;gap:1.5rem;align-items:center}
+header.top a{text-decoration:none;color:var(--muted)}
+header.top a:hover{color:var(--ink)}
+#tema{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:.35rem .9rem;font:inherit;font-size:.9rem;cursor:pointer}
+#tema:hover{border-color:var(--accent)}
+.hero{padding:clamp(3rem,10vw,8rem) 0 clamp(3rem,8vw,6rem)}
+.hero h1{font-size:clamp(3.5rem,15vw,11rem);line-height:.88;letter-spacing:-.045em;font-weight:800;margin:0 0 2rem}
+.hero h1 span{display:block}
+.hero h1 span:last-child{color:var(--accent)}
+.hero p{max-width:34rem;font-size:1.25rem;color:var(--muted);margin:0 0 2rem}
+.btn{display:inline-block;background:var(--accent);color:var(--bg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600}
+.btn:hover{filter:brightness(1.1)}
+section{padding:clamp(2.5rem,6vw,5rem) 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.75rem,4vw,2.5rem);letter-spacing:-.02em;margin:0 0 2rem;font-weight:600}
+.proje{display:grid;grid-template-columns:1fr auto;gap:.25rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding-left .2s}
+.proje:last-of-type{border-bottom:0}
+.proje:hover{padding-left:1rem}
+.proje h3{margin:0;font-size:1.5rem;font-weight:600}
+.proje p{margin:0;color:var(--muted);grid-column:1}
+.proje small{grid-row:1;grid-column:2;color:var(--muted);align-self:center}
+.hakkimda{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.hakkimda p{margin:0 0 1rem;max-width:34rem}
+.beceri{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:0}
+.beceri li{background:var(--surface);padding:.4rem .9rem;border-radius:999px;font-size:.95rem}
+.iletisim a.mail{font-size:clamp(1.5rem,5vw,3rem);font-weight:800;letter-spacing:-.03em;text-decoration:none;border-bottom:3px solid var(--accent)}
+.sosyal{display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem}
+@media (max-width:700px){.hakkimda{grid-template-columns:1fr;gap:1.5rem}.proje{grid-template-columns:1fr}.proje small{grid-row:auto;grid-column:1}header.top nav a.gizle{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.proje{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <strong>DA</strong>
+    <nav>
+      <a class="gizle" href="#projeler">Projeler</a>
+      <a class="gizle" href="#hakkimda">Hakkımda</a>
+      <a href="#iletisim">İletişim</a>
+      <button id="tema" type="button" aria-label="Temayı değiştir">Tema</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1><span>Nazmi</span><span>Karahan</span></h1>
+      <p>Alcatel-Lucent markasının ürünlerinin montajını kurulumunu ve sonrasındaki talepleri gerçekleştiriyorum.</p>
+      <a class="btn" href="#projeler">Projelerime bak</a>
+    </div>
+
+    <section id="projeler">
+      <h2>Seçili projeler</h2>
+      <a class="proje" href="#iletisim">
+        <h3>Accor Mövenpick Otel Santral Versiyonu Yükseltme</h3>
+        <small>2025</small>
+        <p>Yeni model telefonların çalıştırılabilmesi ve sistem entegrasyonunun kolay sağlanabilmesi açısından yapılan bir iş.</p>
+      </a>
+    </section>
+
+    <section id="hakkimda" class="hakkimda">
+      <div>
+        <h2>Hakkımda</h2>
+        <p>İzmir'de yaşıyorum. 9 yıldır müşterilerimize en hızlı ve en doğru şekillde destek sağlıyorum</p>
+        <p>Doğru bir şekilde yapılan müdahale zamanndan kazandırır. Boş zamanlarımda yazılım öğrenmeye ve geliştirmeye çalışıyorum.</p>
+      </div>
+      <div>
+        <h2>Araçlarım</h2>
+        <ul class="beceri">
+          <li>Arayüz tasarımı</li><li>Marka kimliği</li><li>HTML ve CSS</li><li>JavaScript</li><li>React</li><li>Figma</li><li>Erişilebilirlik</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="iletisim" class="iletisim">
+      <h2>Birlikte çalışalım</h2>
+      <a class="mail" href="mailto:nkarahan877@gmail.com">merhaba@ornek.com</a>
+      <div class="sosyal">
+        <a href="#">LinkedIn</a><a href="#">GitHub</a><a href="#">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Nazmi Karahan</footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById("tema");
+  btn.addEventListener("click",function(){
+    var dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);
+    root.setAttribute("data-theme",dark?"light":"dark");
+  });
+})();
+</script>
+</body>
+</html>
